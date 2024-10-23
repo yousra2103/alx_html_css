@@ -1,0 +1,358 @@
+/* ============================ start global styles =============================== */
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro';
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p,blockquote{
+margin: 0;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+.headphone_btn{
+    border-radius: 20px;
+    border: 0;
+    background-color: #FF6565;
+    cursor: pointer;
+    color: #fff;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.headphone_btn:hover{
+    opacity: 0.9
+}
+/* ============================ end global styles =============================== */
+
+/* ============================ start header styles =============================== */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 0;
+    max-width: 1000px;
+    margin: auto;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo img{
+    width: 161px;
+}
+header #openNav,
+header .openNav{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    cursor: pointer;
+    width: 20px;
+    height: 14px;
+    z-index: 8;
+}
+header #openNav{
+    margin: 0;
+    visibility: hidden;
+    z-index: 9;
+}
+header .openNav span{
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    border-radius: 4px;
+    height: 2px;
+    transition: all 0.5s;
+}
+header .openNav span:nth-child(2){
+    width: 13px;
+    margin-block: 4px;
+}
+#openNav:checked + .openNav span:nth-child(2){
+    opacity: 0;
+}
+#openNav:checked + .openNav span:first-child {
+    transform: rotate(45deg);
+    margin-bottom: -6px;
+}
+#openNav:checked + .openNav span:last-child {
+    transform: rotate(-45deg);
+    margin-top: -6px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+header nav a{
+    font-weight: 700;
+    color: #fff;
+    font-size: 12px;
+    transition: all 0.5s;
+}
+header nav a:hover{
+    color: #FF6565;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    header{
+        max-width: 633px;
+    }
+}
+
+@media (max-width: 767px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-inline: 21px;
+    }
+    header #openNav,
+    header .openNav{
+        display: flex;
+        left: 21px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header nav {
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    #openNav:checked ~ nav {
+        display: flex;
+    }
+}
+/* ============================ end header styles =============================== */
+/* ============================ start banner sectoin "banner" styles =============================== */
+.banner{
+        background: url("./images/headphones_hero_1.jpg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.banner .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.banner .container h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-block:20px 5px;
+}
+.banner .container p:first-child{
+    font-size: 16px;
+    font-weight: bold;
+}
+.banner .container button.headphone_btn{
+    margin-block: 40px 65px;
+}
+.banner .container p:last-child{
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 637px;
+    line-height: 26px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .banner{
+        background-position-x: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner{
+        padding-inline: 25px;
+        background-position-x: center;
+    }
+}
+/* ============================ end banner sectoin "banner" styles =============================== */
+/* ============================ start sectoin "What we do" styles =============================== */
+.what_we_do {
+    padding-block: 110px;
+}
+.what_we_do h1{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 68px;
+    text-align: center;
+}
+.what_we_do p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #071629;
+    text-align: center;
+    max-width: 637px;
+    line-height: 26px;
+    margin: 0 auto 97px;
+}
+.what_we_do .what_we_do_cards_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 58px;
+}
+.what_we_do .what_we_do_cards_container .what_we_do_card{
+    width: 180px;
+    height: 207px;
+    text-align: center;
+}
+.what_we_do .what_we_do_cards_container .what_we_do_card i{
+    color: #FF6565;
+    font-size: 65px;
+    display: block;
+    margin-bottom: 62px;
+}
+.what_we_do .what_we_do_cards_container .what_we_do_card span{
+    color: #071629;
+    font-size: 14px;
+    line-height: 26px;
+    display: block;
+    width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .what_we_do{
+        padding-inline: 66px;
+    }
+}
+
+@media (max-width: 767px) {
+    .what_we_do{
+        padding-inline: 25px;
+    }
+}
+/* ============================ end sectoin "What we do" styles =============================== */
+/* ============================ start sectoin "Our results" styles =============================== */
+.our_results {
+    padding-block: 110px;
+    background-image: url("./images/headphones_hero_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.our_results h1{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 68px;
+    text-align: center;
+}
+.our_results p{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 637px;
+    line-height: 26px;
+    margin: 0 auto 97px;
+}
+.our_results .our_results_cards_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 58px;
+}
+.our_results .our_results_cards_container .our_results_card{
+    width: 190px;
+    height: 171px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: url("./images/pentagone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.our_results .our_results_cards_container .our_results_card h1{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.our_results .our_results_cards_container .our_results_card span{
+    font-size: 14px;
+    font-weight: 400;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .our_results{
+        padding-inline: 66px;
+        background-position-x: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .our_results{
+        padding-inline: 25px;
+        background-position-x: center;
+    }
+}
+/* ============================ end sectoin "Our results" styles =============================== */
+/* ============================ start sectoin "Contact us" styles =============================== */
+.contact_us {
+    padding-block: 110px;
+}
+.contact_us h1{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 68px;
+    text-align: center;
+}
+.contact_us form{
+    max-width: 335px;
+    margin: auto;
+    text-align: center;
+}
+.contact_us form input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #979797;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #071629;
+    margin-bottom: 45px;
+}
+.contact_us form input::placeholder{
+    color: #071629;
+}
+.contact_us form input:focus{
+    outline: 0;
+}
+.contact_us form button{
+    width: 162px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact_us{
+        padding-inline: 66px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact_us{
+        padding-inline: 25px;
+    }
+}
+/* ============================ end sectoin "Contact us" styles =============================== */
